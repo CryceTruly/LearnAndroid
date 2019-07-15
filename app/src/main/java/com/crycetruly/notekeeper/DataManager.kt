@@ -1,0 +1,48 @@
+package com.crycetruly.notekeeper
+
+import com.crycetruly.notekeeper.model.CourseInfo
+import com.crycetruly.notekeeper.model.NoteInfo
+
+object  DataManager {
+    val courses=HashMap<String,CourseInfo>()
+    val notes=ArrayList<NoteInfo>()
+
+    init {
+        initializeCourses()
+        initializeNotes()
+    }
+
+    private fun initializeCourses(){
+
+        var course7=CourseInfo("Test7","Ruby Programming")
+        courses.set(course7.courseId,course7)
+        var course=CourseInfo("Test1","Java Programming")
+        courses.set(course.courseId,course)
+        var course2=CourseInfo("Test2","Kotlin Programming")
+        courses.set(course2.courseId,course2)
+        var course3=CourseInfo("Test3","Python Programming")
+        courses.set(course3.courseId,course3)
+        courses.set(CourseInfo("Test67","Javascript Programming").courseId,CourseInfo("Test67","Javascript Programming"))
+
+    }
+
+    private fun initializeNotes(){
+        var course=CourseInfo("Test1","Java Programming")
+        var course2=CourseInfo("Test2","Kotlin Programming")
+        var course3=CourseInfo("Test3","Python Programming")
+
+        val note=NoteInfo(course,course.title,"Java is old")
+        notes.add(note)
+        val note2=NoteInfo(course2,course2.title,"Kotlin is new")
+        notes.add(note2)
+        val note3=NoteInfo(course3,course3.title,"Python is aws hehehe")
+        notes.add(note3)
+
+
+    }
+
+
+    public fun getNote(position:Int):NoteInfo{
+        return notes[position]
+    }
+}
