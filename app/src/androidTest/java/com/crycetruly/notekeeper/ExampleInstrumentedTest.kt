@@ -1,4 +1,4 @@
-package com.crycetruly.alc40
+package com.crycetruly.notekeeper
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.crycetruly.alc40", appContext.packageName)
+        assertEquals("com.crycetruly.notekeeper", appContext.packageName)
     }
 }
