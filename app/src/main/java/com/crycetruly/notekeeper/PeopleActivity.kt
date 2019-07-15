@@ -1,7 +1,7 @@
 package com.crycetruly.notekeeper
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.crycetruly.notekeeper.model.Person
 
 class PeopleActivity : AppCompatActivity() {
@@ -12,12 +12,12 @@ class PeopleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_people)
 
-        var person=Person("Cryce","Truly",24)
-        var person2=Person("Amon","Kanyesigye",27)
-        var person3=Person("Andinda","Adia",21)
-        var person4=Person("Corey","Mschafer",29)
+        val person = Person("Cryce", "Truly", 24)
+        val person2 = Person("Amon", "Kanyesigye", 27)
+        val person3 = Person("Andinda", "Adia", 21)
+        val person4 = Person("Corey", "Mschafer", 29)
 
-        var people= arrayOf(person.firstName,person2.firstName,person4.firstName,person3.firstName)
+        val people = arrayOf(person.firstName, person2.firstName, person4.firstName, person3.firstName)
         people.forEach { per-> print(per) }
 
 

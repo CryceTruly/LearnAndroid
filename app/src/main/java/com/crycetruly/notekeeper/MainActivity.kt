@@ -1,10 +1,10 @@
 package com.crycetruly.notekeeper
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatActivity
 import com.crycetruly.notekeeper.model.CourseInfo
 import com.crycetruly.notekeeper.model.NoteInfo
 import kotlinx.android.synthetic.main.activity_people.*
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_people)
-        supportActionBar?.setTitle("Edit Note")
+        supportActionBar?.title = "Edit Note"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val adapter =
@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
     override fun onSaveInstanceState(outState: Bundle?) {
-
         super.onSaveInstanceState(outState)
         outState?.putInt(POSITION,selectedNote)
 
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
 
         if (selectedNote>=DataManager.notes.lastIndex){
-            var menuItem=menu?.findItem(R.id.action_next)
+            val menuItem = menu?.findItem(R.id.action_next)
                 if(menuItem !=null){
                     menuItem.isEnabled=false
                     @Target()

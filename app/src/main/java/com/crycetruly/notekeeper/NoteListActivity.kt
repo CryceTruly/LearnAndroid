@@ -3,7 +3,7 @@ package com.crycetruly.notekeeper
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
 import com.crycetruly.notekeeper.model.NoteInfo
 
 import kotlinx.android.synthetic.main.activity_note_list.*
@@ -15,7 +15,7 @@ class NoteListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note_list)
 
-        supportActionBar?.setTitle("Notes")
+        supportActionBar?.title = "Notes"
 
         fab.setOnClickListener { view ->
             val intent = Intent(this, MainActivity::class.java)
@@ -35,7 +35,7 @@ class NoteListActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        (noteList.adapter as ArrayAdapter<NoteInfo>).notifyDataSetChanged()
+        (noteList.adapter as ArrayAdapter<*>).notifyDataSetChanged()
         super.onResume()
     }
 

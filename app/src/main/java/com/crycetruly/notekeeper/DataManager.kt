@@ -14,22 +14,22 @@ object  DataManager {
 
     private fun initializeCourses(){
 
-        var course7=CourseInfo("Test7","Ruby Programming")
+        val course7 = CourseInfo("Test7", "Ruby Programming")
         courses.set(course7.courseId,course7)
-        var course=CourseInfo("Test1","Java Programming")
+        val course = CourseInfo("Test1", "Java Programming")
         courses.set(course.courseId,course)
-        var course2=CourseInfo("Test2","Kotlin Programming")
+        val course2 = CourseInfo("Test2", "Kotlin Programming")
         courses.set(course2.courseId,course2)
-        var course3=CourseInfo("Test3","Python Programming")
+        val course3 = CourseInfo("Test3", "Python Programming")
         courses.set(course3.courseId,course3)
         courses.set(CourseInfo("Test67","Javascript Programming").courseId,CourseInfo("Test67","Javascript Programming"))
 
     }
 
     private fun initializeNotes(){
-        var course=CourseInfo("Test1","Java Programming")
-        var course2=CourseInfo("Test2","Kotlin Programming")
-        var course3=CourseInfo("Test3","Python Programming")
+        val course = CourseInfo("Test1", "Java Programming")
+        val course2 = CourseInfo("Test2", "Kotlin Programming")
+        val course3 = CourseInfo("Test3", "Python Programming")
 
         val note=NoteInfo(course,course.title,"Java is old")
         notes.add(note)
@@ -42,7 +42,7 @@ object  DataManager {
     }
 
 
-    public fun getNote(position:Int):NoteInfo{
+    fun getNote(position: Int): NoteInfo {
         return notes[position]
     }
 }
