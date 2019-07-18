@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.crycetruly.notekeeper.model.CourseInfo
 import com.crycetruly.notekeeper.model.NoteInfo
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_people.*
 
 class MainActivity : AppCompatActivity() {
     private var selectedNote = POSITION_NOT_SET
+    private val TAG=this::class.simpleName
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +31,15 @@ class MainActivity : AppCompatActivity() {
         if (selectedNote != POSITION_NOT_SET) {
             displayNote(selectedNote)
         }else{
-            DataManager.notes.add(NoteInfo())
-            selectedNote=DataManager.notes.lastIndex
+            createNewNote()
         }
 
 
+    }
+
+    private fun createNewNote() {
+        DataManager.notes.add(NoteInfo())
+        selectedNote = DataManager.notes.lastIndex
     }
 
     @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -44,6 +50,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayNote(selectedNote: Int) {
+
+
+        if (selectedNote>DataManager.notes.lastIndex){
+
+            val s: String = "Note not found"
+            showMessage(s)
+        }
+
+
         val note = DataManager.getNote(selectedNote)
         noteTitle.setText(note.title)
         noteText.setText(note.text)
@@ -74,7 +89,15 @@ class MainActivity : AppCompatActivity() {
 
         return when (item.itemId) {
             R.id.action_next -> {
-                moveNext()
+
+                if (selectedNote<DataManager.notes.lastIndex){
+                    moveNext()
+                }else{
+                    val s: String = "No more notes"
+                    showMessage(s)
+                }
+
+
                 true
             }
             android.R.id.home -> {
@@ -87,6 +110,10 @@ class MainActivity : AppCompatActivity() {
                 super.onOptionsItemSelected(item)
         }
 
+    }
+
+    private fun showMessage(s: String) {
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show()
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {

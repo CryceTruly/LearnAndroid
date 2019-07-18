@@ -12,7 +12,26 @@ object  DataManager {
         initializeNotes()
     }
 
-    private fun initializeCourses(){
+
+    fun addNote(course:CourseInfo,noteTitle:String,noteText:String):Int{
+        val note=NoteInfo(course,noteTitle,noteText)
+        notes.add(note)
+        return notes.lastIndex;
+    }
+
+    fun findSmilarNote(course:CourseInfo,noteTitle:String,noteText:String): NoteInfo? {
+
+        for (note in notes){
+            if(note.course==course&&note.title==noteTitle&&note.text==noteText){
+                return note
+            }
+        }
+
+
+    return null
+    }
+
+     fun initializeCourses(){
 
         val course7 = CourseInfo("Test7", "Ruby Programming")
         courses.set(course7.courseId,course7)
@@ -26,7 +45,7 @@ object  DataManager {
 
     }
 
-    private fun initializeNotes(){
+     fun initializeNotes(){
         val course = CourseInfo("Test1", "Java Programming")
         val course2 = CourseInfo("Test2", "Kotlin Programming")
         val course3 = CourseInfo("Test3", "Python Programming")
