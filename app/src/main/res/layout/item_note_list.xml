@@ -10,16 +10,18 @@
             app:cardCornerRadius="4dp" app:cardUseCompatPadding="true">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="23dp"
+                tools:layout_editor_absoluteX="21dp">
 
             <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" tools:srcCompat="@drawable/ic_action_assignment"
-                    android:id="@+id/imageView" app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
-                    android:tint="@android:color/holo_orange_dark"/>
+                    android:id="@+id/imageView"
+                    android:tint="@android:color/holo_orange_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"/>
             <TextView
                     android:text="This is the title"
                     android:layout_width="wrap_content"
@@ -34,12 +36,12 @@
                     android:text="This is the note text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/noteText" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-                    app:layout_constraintHorizontal_bias="0.162"
+                    android:id="@+id/noteText"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/noteTitle"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                    app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </FrameLayout>
