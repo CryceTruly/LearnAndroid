@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView;
-import com.crycetruly.notekeeper.model.NoteInfo
 
 class NoteRecyclerAdapter(public val  context: Context,private val notes:List<NoteInfo>):
 

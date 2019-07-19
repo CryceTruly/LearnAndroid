@@ -1,7 +1,6 @@
 package com.crycetruly.notekeeper
 
 import androidx.test.rule.ActivityTestRule
-import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -10,12 +9,8 @@ import org.junit.runners.JUnit4
 import androidx.test.espresso.Espresso.*
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.espresso.action.ViewActions.*
-import com.crycetruly.notekeeper.model.CourseInfo
 import org.hamcrest.Matchers.*
-import androidx.test.espresso.Espresso.pressBack
-import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import com.crycetruly.notekeeper.model.NoteInfo
 import org.junit.Test
 
 @RunWith(JUnit4::class)

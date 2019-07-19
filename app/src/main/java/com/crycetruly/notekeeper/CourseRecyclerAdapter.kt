@@ -5,11 +5,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView;
-import com.crycetruly.notekeeper.model.CourseInfo
-import com.crycetruly.notekeeper.model.NoteInfo
 
 class CourseRecyclerAdapter(public val  context: Context, private val courses:List<CourseInfo>):
 

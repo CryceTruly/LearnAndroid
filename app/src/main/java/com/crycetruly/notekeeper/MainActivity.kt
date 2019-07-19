@@ -6,8 +6,6 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.crycetruly.notekeeper.model.CourseInfo
-import com.crycetruly.notekeeper.model.NoteInfo
 import kotlinx.android.synthetic.main.activity_people.*
 
 class MainActivity : AppCompatActivity() {
