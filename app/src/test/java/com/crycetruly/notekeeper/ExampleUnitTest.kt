@@ -1,4 +1,4 @@
-package com.crycetruly.alc40
+package com.crycetruly.notekeeper
 
 import org.junit.Test
 
