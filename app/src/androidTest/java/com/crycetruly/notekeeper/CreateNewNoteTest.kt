@@ -1,5 +1,4 @@
 package com.crycetruly.notekeeper
-import androidx.test.espresso.DataInteraction
 import androidx.test.rule.ActivityTestRule
 import org.junit.After
 import org.junit.Before
@@ -12,7 +11,6 @@ import org.junit.runners.JUnit4
 import androidx.test.espresso.Espresso.*
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.espresso.action.ViewActions.*
-import com.crycetruly.notekeeper.model.CourseInfo
 import org.hamcrest.Matchers.*
 import androidx.test.espresso.Espresso.pressBack
 import androidx.test.espresso.action.ViewActions.closeSoftKeyboard

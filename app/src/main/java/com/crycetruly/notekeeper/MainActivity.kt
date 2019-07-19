@@ -6,8 +6,6 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.crycetruly.notekeeper.model.CourseInfo
-import com.crycetruly.notekeeper.model.NoteInfo
 import kotlinx.android.synthetic.main.activity_people.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val adapter =
-            ArrayAdapter<CourseInfo>(this, android.R.layout.simple_spinner_item, DataManager.courses.values.toList())
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, DataManager.courses.values.toList())
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         cousesSpinner.adapter = adapter
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         if (selectedNote>DataManager.notes.lastIndex){
 
-            val s: String = "Note not found"
+            val s = "Note not found"
             showMessage(s)
         }
 
