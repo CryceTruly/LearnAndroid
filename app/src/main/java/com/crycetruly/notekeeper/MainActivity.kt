@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val adapter =
-            ArrayAdapter<CourseInfo>(this, android.R.layout.simple_spinner_item, DataManager.courses.values.toList())
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, DataManager.courses.values.toList())
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         cousesSpinner.adapter = adapter
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         if (selectedNote>DataManager.notes.lastIndex){
 
-            val s: String = "Note not found"
+            val s = "Note not found"
             showMessage(s)
         }
 
