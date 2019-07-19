@@ -13,9 +13,10 @@ class NoteListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_note_list)
+        setContentView(R.layout.content_note_list)
 
         supportActionBar?.title = "Notes"
+        supportActionBar?.subtitle=DataManager.notes.size.toString()
 
         fab.setOnClickListener { view ->
             val intent = Intent(this, MainActivity::class.java)

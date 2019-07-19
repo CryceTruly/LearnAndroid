@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_people.*
 
 class MainActivity : AppCompatActivity() {
     private var selectedNote = POSITION_NOT_SET
-    private val TAG=this::class.simpleName
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

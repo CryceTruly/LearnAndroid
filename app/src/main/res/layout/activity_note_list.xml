@@ -7,13 +7,15 @@
         android:layout_height="match_parent"
         tools:context=".NoteListActivity">
     <include layout="@layout/content_note_list"/>
+    <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true" tools:srcCompat="@tools:sample/avatars"
+                android:id="@+id/floatingActionButton"/>
+    </com.google.android.material.navigation.NavigationView>
 
-    <Button
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:text="Add"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
