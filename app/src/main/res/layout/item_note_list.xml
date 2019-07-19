@@ -14,7 +14,7 @@
                 tools:layout_editor_absoluteX="21dp">
 
             <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" tools:srcCompat="@drawable/ic_action_assignment"
                     android:id="@+id/imageView"
                     android:tint="@android:color/holo_orange_dark"
